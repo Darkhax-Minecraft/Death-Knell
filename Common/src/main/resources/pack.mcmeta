@@ -1,6 +1,6 @@
 {
     "pack": {
-        "description": "${mod_name}",
+        "description": "Spice up your game with new player death messages.",
         "pack_format": 6
     }
 }

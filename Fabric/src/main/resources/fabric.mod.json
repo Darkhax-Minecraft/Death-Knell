@@ -1,29 +1,28 @@
 {
     "schemaVersion": 1,
-    "id": "modid",
+    "id": "deathknell",
     "version": "${version}",
   
     "name": "Example Mod",
-    "description": "This is an example description! Tell everyone what your mod is about!",
+    "description": "Spice up dying in Minecraft with new player death messages.",
     "authors": [
-      "Me!"
+      "Darkhax"
     ],
     "contact": {
-      "homepage": "https://fabricmc.net/",
-      "sources": "https://github.com/FabricMC/fabric-example-mod"
+      "homepage": "https://www.curseforge.com/minecraft/mc-mods/death-knell",
+      "sources": "https://github.com/Darkhax-Minecraft/Death-Knell"
     },
   
-    "license": "CC0-1.0",
-    "icon": "assets/modid/icon.png",
+    "license": "LGPL v2.1",
   
     "environment": "*",
     "entrypoints": {
       "main": [
-        "com.example.examplemod.ExampleMod"
+        "net.darkhax.deathknell.FabricBootstrap"
       ]
     },
     "mixins": [
-      "modid.mixins.json"
+      "deathknell.mixins.json"
     ],
   
     "depends": {
@@ -31,9 +30,5 @@
       "fabric": "*",
       "minecraft": "1.17.x",
       "java": ">=16"
-    },
-    "suggests": {
-      "another-mod": "*"
     }
-  }
-  
+} 

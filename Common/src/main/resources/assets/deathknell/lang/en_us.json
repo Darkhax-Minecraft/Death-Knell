@@ -1,0 +1,7 @@
+{
+  "message.deathknell.boat_death.1": "%s went down with the ship.",
+  "message.deathknell.boat_death.2": "%s was lost at sea.",
+  "message.deathknell.boat_death.3": "%s ",
+
+  "message.deathknell.death_by_cookie": "%s forced %s to eat too many cookies!"
+}

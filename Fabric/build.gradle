@@ -1,6 +1,5 @@
 plugins {
     id 'fabric-loom' version '0.9-SNAPSHOT'
-    id 'maven-publish'
     id 'idea'
 }
 
@@ -33,37 +32,19 @@ loom {
 
 
 processResources {
+
     inputs.property "version", project.version
 
     filesMatching("fabric.mod.json") {
+
         expand "version": project.version
     }
 }
-
-sourceSets.main.resources.srcDir '../Common/src/main/resources'
 
 tasks.withType(JavaCompile) {
     source(project(":Common").sourceSets.main.allSource)
 }
 
-jar {
-    from("LICENSE") {
-        rename { "${it}_${mod_name}" }
-    }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact(remapJar) {
-                builtBy remapJar
-            }
-            artifact(sourcesJar) {
-                builtBy remapSourcesJar
-            }
-        }
-    }
-
-    repositories {
-    }
+processResources {
+    from project(":Common").sourceSets.main.resources
 }

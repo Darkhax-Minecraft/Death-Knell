@@ -1,6 +1,6 @@
-package com.example.examplemod.mixin;
+package net.darkhax.deathknell.mixin;
 
-import com.example.examplemod.Constants;
+import net.darkhax.deathknell.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
