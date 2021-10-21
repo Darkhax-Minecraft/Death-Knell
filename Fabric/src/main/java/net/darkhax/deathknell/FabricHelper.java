@@ -10,7 +10,6 @@ public class FabricHelper implements IHelper {
     @Override
     public Tag.Named<Item> createItemTag(ResourceLocation id) {
 
-        Constants.LOG.info("Create tag with id " + id.toString());
         return TagFactory.ITEM.create(id);
     }
 }

@@ -1,14 +1,17 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 apply plugin: 'java'
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 
 archivesBaseName = "${mod_name}-forge-${minecraft_version}"
@@ -21,6 +24,7 @@ minecraft {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
             taskName 'Client'
+            arg "-mixin.config=${mod_id}.mixins.json"
             mods {
                 modClientRun {
                     source sourceSets.main
@@ -33,6 +37,7 @@ minecraft {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
             taskName 'Server'
+            arg "-mixin.config=${mod_id}.mixins.json"
             mods {
                 modServerRun {
                     source sourceSets.main
@@ -55,7 +60,27 @@ processResources {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    annotationProcessor 'org.spongepowered:mixin:0.8.4-SNAPSHOT:processor'
     compileOnly project(":Common")
+}
+
+jar {
+
+    manifest {
+
+        def newProps = [:]
+
+        newProps['ModLoader'] = "forge-${forge_version}"
+        newProps['MixinConfigs'] = "${mod_id}.mixins.json"
+
+        attributes(newProps)
+    }
+}
+
+mixin {
+
+    // Tells the mixin plugin where to put the generated refmap file.
+    add sourceSets.main, "${mod_id}.refmap.json"
 }
 
 jar.finalizedBy('reobfJar')
