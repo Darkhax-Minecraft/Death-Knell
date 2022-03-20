@@ -6,6 +6,7 @@ import net.darkhax.deathknell.message.IDeathMessage;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.CombatEntry;
 import net.minecraft.world.damagesource.CombatTracker;
 import net.minecraft.world.damagesource.DamageSource;
@@ -23,9 +24,9 @@ import net.minecraft.world.item.ItemStack;
 public class DeathKnellCommon {
 
     // Tags
-    private static final Tag.Named<Item> COOKIES = bind("cookies");
-    private static final Tag.Named<Item> BOOKS = bind("books");
-    private static final Tag.Named<Item> AXES = bind("axes");
+    private static final TagKey<Item> COOKIES = bind("cookies");
+    private static final TagKey<Item> BOOKS = bind("books");
+    private static final TagKey<Item> AXES = bind("axes");
 
     // Messages
     private static final IDeathMessage GENERIC_SLAIN = new DeathMessageRandom("thwarted", "bonked", "defeated", "butchered", "assassinate", "eliminated", "extinguished", "terminated", "done_in", "executed", "stopped", "stifle", "slaughter", "exterminated", "vanquished", "bested", "trounced");
@@ -145,7 +146,7 @@ public class DeathKnellCommon {
         return message != null && message.getKey().startsWith("death.attack.player");
     }
 
-    private static Tag.Named<Item> bind(String tagId) {
+    private static TagKey<Item> bind(String tagId) {
 
         return Services.HELPER.createItemTag(Constants.MOD_ID, tagId);
     }
