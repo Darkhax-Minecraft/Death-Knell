@@ -1,6 +1,6 @@
 package net.darkhax.deathknell.mixin;
 
-import net.darkhax.deathknell.CommonBootstrap;
+import net.darkhax.deathknell.DeathKnellCommon;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.CombatTracker;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +14,7 @@ public abstract class MixinCombatTracker {
     @Inject(method = "getDeathMessage", at = @At("RETURN"), cancellable = true)
     public void getDeathMessage(CallbackInfoReturnable<Component> callback) {
 
-        final CombatTracker self = (CombatTracker)(Object)this;
-        callback.setReturnValue(CommonBootstrap.getCustomDeathMessage(callback.getReturnValue(), self));
+        final CombatTracker self = (CombatTracker) (Object) this;
+        callback.setReturnValue(DeathKnellCommon.getCustomDeathMessage(callback.getReturnValue(), self));
     }
 }

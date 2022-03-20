@@ -1,38 +1,62 @@
 package net.darkhax.deathknell.message;
 
-import net.minecraft.commands.CommandSource;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * This interface defines a factory for generating death messages.
+ */
 public interface IDeathMessage {
 
-    List<IDeathMessage> MESSAGES = new ArrayList<>();
-
+    /**
+     * Generates the message to display for this death message.
+     *
+     * @param args The message parameters such as victim name and killer name.
+     * @return The death message to display.
+     */
     Component getMessage(Object... args);
 
+    /**
+     * Generates a sub-variant of the death message.
+     *
+     * @param alt  The variant suffix to generate.
+     * @param args The message parameters such as victim name and killer name.
+     * @return The death message to display.
+     */
     Component getSubMessage(String alt, Object... args);
 
-    void dumpMessages(CommandSource source, Object... args);
+    /**
+     * Remaps certain message parameter types into their display friendly counterparts.
+     * <p>
+     * LivingEntity -> LivingEntity#getDisplayName
+     * <p>
+     * ItemStack -> ItemStack#getDisplayName
+     *
+     * @param args The message parameters to remap.
+     * @return The remapped message parameters.
+     */
+    static Object[] remapArgs(Object[] args) {
 
-    default void remapArgs(Object[] args) {
+        final Object[] remapped = new Object[args.length];
 
         for (int i = 0; i < args.length; i++) {
 
-            final Object obj = args[i];
+            Object obj = args[i];
 
             if (obj instanceof LivingEntity living) {
 
-                args[i] = ((LivingEntity) obj).getDisplayName();
+                obj = ((LivingEntity) obj).getDisplayName();
             }
 
             else if (obj instanceof ItemStack stack) {
 
-                args[i] = stack.getDisplayName();
+                obj = stack.getDisplayName();
             }
+
+            remapped[i] = obj;
         }
+
+        return remapped;
     }
 }

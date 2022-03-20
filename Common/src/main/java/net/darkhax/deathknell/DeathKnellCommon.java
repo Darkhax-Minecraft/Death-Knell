@@ -1,6 +1,5 @@
 package net.darkhax.deathknell;
 
-import com.mojang.datafixers.kinds.Const;
 import net.darkhax.deathknell.message.DeathMessage;
 import net.darkhax.deathknell.message.DeathMessageRandom;
 import net.darkhax.deathknell.message.IDeathMessage;
@@ -21,7 +20,7 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-public class CommonBootstrap {
+public class DeathKnellCommon {
 
     // Tags
     private static final Tag.Named<Item> COOKIES = bind("cookies");
@@ -41,12 +40,6 @@ public class CommonBootstrap {
     private static final IDeathMessage GUARDIAN_DEATH = new DeathMessage("stared_down");
     private static final IDeathMessage FALL_DEATH = new DeathMessageRandom("fall_bounce", "fall_gravity", "fall_parachute");
     private static final IDeathMessage DROWN_DEATH = new DeathMessageRandom("drown_breath", "drown_fishes", "drown_fish_food");
-
-    public static void init() {
-
-        ItemStack s;
-        s.getMaxDamage()
-    }
 
     public static Component getCustomDeathMessage(Component original, CombatTracker tracker) {
 

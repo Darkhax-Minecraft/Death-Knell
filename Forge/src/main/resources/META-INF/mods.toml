@@ -1,31 +1,15 @@
 modLoader="javafml"
-loaderVersion="[37,]"
-issueTrackerURL="https://github.com/Darkhax-Minecraft/Death-Knell"
-license="LGPL v2.1"
+loaderVersion="[39,)"
+license="${mod_license}"
+issueTrackerURL="${mod_issues}"
 
 [[mods]]
-modId="deathknell"
-updateJSONURL="https://updates.blamejared.com/get?n=deathknell&gv=1.17.1"
+modId="${mod_id}"
 version="${file.jarVersion}"
-displayName="${modName}"
-displayURL="${modHomepage}"
-credits="${modCredits}"
-authors="${modAuthor}"
+displayName="${mod_name}"
+displayURL="${mod_homepage}"
+credits="This project is made possible with Patreon support from players like you. Thank you! ${mod_supporters}"
+authors="${mod_author}"
 description='''
-${modDescription}
+${mod_description}
 '''
-itemIcon="minecraft:golden_apple"
-
-[[dependencies.deathknell]]
-    modId="forge"
-    mandatory=true
-    versionRange="[37,]"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.deathknell]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.17.1]"
-    ordering="NONE"
-    side="BOTH"

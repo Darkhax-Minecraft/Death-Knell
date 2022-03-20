@@ -12,5 +12,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'DeathKnell'
-include("Common", "Fabric", "Forge")
+rootProject.name = "DeathKnell"
+include('Common', 'Fabric', 'Forge')
