@@ -31,6 +31,14 @@
   "message.deathknell.stifle.item": "%1$s was stifled by %2$s using %3$s",
   "message.deathknell.slaughter": "%1$s was slaughtered by %2$s",
   "message.deathknell.slaughter.item": "%1$s was slaughtered by %2$s using %3$s",
+  "message.deathknell.exterminated": "%1$s was exterminated by %2$s",
+  "message.deathknell.exterminated.item": "%1$s was exterminated by %2$s using %3$s",
+  "message.deathknell.vanquished": "%1$s was vanquished by %2$s",
+  "message.deathknell.vanquished.item": "%1$s was vanquished by %2$s's %3$s",
+  "message.deathknell.bested": "%1$s was bested by %2$s",
+  "message.deathknell.bested.item": "%1$s was bested by %2$s using %3$s",
+  "message.deathknell.trounced": "%1$s was trounced by %2$s",
+  "message.deathknell.trounced.item": "%1$s was trounced by %2$s using %3$s",
 
   "message.deathknell.down_with_ship": "%1$s went down with the ship",
 

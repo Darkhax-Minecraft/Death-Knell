@@ -28,7 +28,7 @@ public class DeathKnellCommon {
     private static final Tag.Named<Item> AXES = bind("axes");
 
     // Messages
-    private static final IDeathMessage GENERIC_SLAIN = new DeathMessageRandom("thwarted", "bonked", "defeated", "butchered", "assassinate", "eliminated", "extinguished", "terminated", "done_in", "executed", "stopped", "stifle", "slaughter");
+    private static final IDeathMessage GENERIC_SLAIN = new DeathMessageRandom("thwarted", "bonked", "defeated", "butchered", "assassinate", "eliminated", "extinguished", "terminated", "done_in", "executed", "stopped", "stifle", "slaughter", "exterminated", "vanquished", "bested", "trounced");
     private static final IDeathMessage DEATH_BY_COOKIE = new DeathMessage("death_by_cookie");
     private static final IDeathMessage DEATH_BY_BOOK = new DeathMessage("death_by_book");
     private static final IDeathMessage DEATH_BY_AXE = new DeathMessage("death_by_axe");
