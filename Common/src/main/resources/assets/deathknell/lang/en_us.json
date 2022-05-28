@@ -45,7 +45,7 @@
   "message.deathknell.incinerated": "%1$s was incinerated by %2$s",
   "message.deathknell.reduce_to_ash": "%1$s was reduced to ash by %2$s",
   "message.deathknell.cooked_alive": "%1$s was cooked alive by %2$s",
-  "message.deathknell.spider_venom": "%1$s succame to %2Ss venom",
+  "message.deathknell.spider_venom": "%1$s succame to %2$s venom",
   "message.deathknell.dissolve": "%1$s was dissolved by %2$s",
   "message.deathknell.slime_food": "%1$s became %2$s food",
   "message.deathknell.respect_habitat": "%1$s did not respect %2$s's habitat",
