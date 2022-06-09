@@ -4,8 +4,8 @@ import net.darkhax.deathknell.message.DeathMessage;
 import net.darkhax.deathknell.message.DeathMessageRandom;
 import net.darkhax.deathknell.message.IDeathMessage;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.tags.Tag;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.CombatEntry;
 import net.minecraft.world.damagesource.CombatTracker;
@@ -52,9 +52,6 @@ public class DeathKnellCommon {
         //@Nullable
         final LivingEntity killer = tracker.getKiller();
 
-        //@Nullable
-        final TranslatableComponent translatable = original instanceof TranslatableComponent msg ? msg : null;
-
         if (killer == null) {
 
             if (source != null) {
@@ -72,6 +69,9 @@ public class DeathKnellCommon {
         }
 
         if (killer != null) {
+
+            //@Nullable
+            final TranslatableContents translatable = original.getContents() instanceof TranslatableContents msg ? msg : null;
 
             final ItemStack murderWeapon = killer.getMainHandItem();
             final boolean wasGenericKill = wasGenericMobKill(translatable) || wasGenericPlayerKill(translatable);
@@ -136,12 +136,12 @@ public class DeathKnellCommon {
         return original;
     }
 
-    private static boolean wasGenericMobKill(TranslatableComponent message) {
+    private static boolean wasGenericMobKill(TranslatableContents message) {
 
         return message != null && message.getKey().startsWith("death.attack.mob");
     }
 
-    private static boolean wasGenericPlayerKill(TranslatableComponent message) {
+    private static boolean wasGenericPlayerKill(TranslatableContents message) {
 
         return message != null && message.getKey().startsWith("death.attack.player");
     }
