@@ -24,7 +24,7 @@
   "message.deathknell.done_in": "%1$s was done in by %2$s",
   "message.deathknell.done_in.item": "%1$s was done in by %2$s using %3$s",
   "message.deathknell.executed": "%1$s was executed by %2$s",
-  "message.deathknell.executed.item": "%1$s was executed by %2$s",
+  "message.deathknell.executed.item": "%1$s was executed by %2$s using %3$s",
   "message.deathknell.stopped": "%2$s put a stop to %1$s",
   "message.deathknell.stopped.item": "%2$s put a stop to %1$s using %3$s",
   "message.deathknell.stifle": "%1$s was stifled by %2$s",
