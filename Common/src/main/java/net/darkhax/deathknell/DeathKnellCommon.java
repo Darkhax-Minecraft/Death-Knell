@@ -4,8 +4,8 @@ import net.darkhax.deathknell.message.DeathMessage;
 import net.darkhax.deathknell.message.DeathMessageRandom;
 import net.darkhax.deathknell.message.IDeathMessage;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.contents.TranslatableContents;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.CombatEntry;
 import net.minecraft.world.damagesource.CombatTracker;
@@ -56,12 +56,12 @@ public class DeathKnellCommon {
 
             if (source != null) {
 
-                if (source == DamageSource.FALL && tryPercent(0.6f)) {
+                if (source.is(DamageTypeTags.IS_FALL) && tryPercent(0.6f)) {
 
                     return FALL_DEATH.getMessage(deadMob);
                 }
 
-                if (source == DamageSource.DROWN && tryPercent(0.6f)) {
+                if (source.is(DamageTypeTags.IS_DROWNING) && tryPercent(0.6f)) {
 
                     return DROWN_DEATH.getMessage(deadMob);
                 }
