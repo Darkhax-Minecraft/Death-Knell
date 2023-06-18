@@ -4,6 +4,7 @@
   "package": "net.darkhax.deathknell.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AccessorCombatTracker",
     "MixinCombatTracker"
   ],
   "injectors": {
