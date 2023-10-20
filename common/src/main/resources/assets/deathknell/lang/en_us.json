@@ -39,25 +39,46 @@
   "message.deathknell.bested.item": "%1$s was bested by %2$s using %3$s",
   "message.deathknell.trounced": "%1$s was trounced by %2$s",
   "message.deathknell.trounced.item": "%1$s was trounced by %2$s using %3$s",
+  "message.deathknell.ended": "%1$s was ended by %2$s",
+  "message.deathknell.ended.item": "%1$s was bested by %2$s using %3$s",
+  "message.deathknell.perished": "%1$s perished whilst fighting %2$s",
+  "message.deathknell.perished.item": "%1$s perished by %3$s whilst fighting %2$s",
+  "message.deathknell.demise": "%2$s caused %1$s's demise",
+  "message.deathknell.demise.item": "%2$s caused %1$s's demise using %3$s",
+  "message.deathknell.pwned": "%1$s got pwned by %2$s",
+  "message.deathknell.pwned.item": "%1$s got pwned by %2$s using %3$s",
 
   "message.deathknell.down_with_ship": "%1$s went down with the ship",
 
   "message.deathknell.incinerated": "%1$s was incinerated by %2$s",
   "message.deathknell.reduce_to_ash": "%1$s was reduced to ash by %2$s",
   "message.deathknell.cooked_alive": "%1$s was cooked alive by %2$s",
+  "message.deathknell.fire_out": "%1$s couldn't put the fire out whilst fighting %2$s",
   "message.deathknell.spider_venom": "%1$s succame to %2$s venom",
   "message.deathknell.dissolve": "%1$s was dissolved by %2$s",
   "message.deathknell.slime_food": "%1$s became %2$s food",
   "message.deathknell.respect_habitat": "%1$s did not respect %2$s's habitat",
   "message.deathknell.disturb_den": "%1$s disturbed %2$s's den",
+  "message.deathknell.saved_from_village": "%2$s saved the village from %1$s",
   "message.deathknell.watery_grave": "%2$s sent %1$s to a watery grave",
   "message.deathknell.stared_down": "%1$s was stared down by %2$1",
 
   "message.deathknell.fall_bounce": "%1$s didn't bounce",
   "message.deathknell.fall_gravity": "%1$s was slain by Gravity",
   "message.deathknell.fall_parachute": "%1$s forgot their parachute",
+  "message.deathknell.fall_stub": "%1$s stubbed their toe and fell",
+  "message.deathknell.free_fall": "%1$s was freeeee, free-fallin'",
 
   "message.deathknell.drown_breath": "%1$s couldn't hold their breath",
   "message.deathknell.drown_fishes": "%1$s is sleeping with the fishes",
-  "message.deathknell.drown_fish_food": "%1$s became fish food"
+  "message.deathknell.drown_fish_food": "%1$s became fish food",
+  "message.deathknell.drown_shark_bait": "%1$s became shark bait",
+  "message.deathknell.drown_floundered": "%1$s floundered too hard",
+
+  "message.deathknell.elytra_wall_bang": "%1$s banged into a wall whilst flying",
+  "message.deathknell.elytra_wall_crash": "%1$s crashed into a wall",
+
+  "message.deathknell.void_abyss": "%1$s fell into the infinite abyss",
+  "message.deathknell.void_infinity": "%1$s fell into infinity plus one",
+  "message.deathknell.void_divide": "%1$s tried to divide by zero"
 }
