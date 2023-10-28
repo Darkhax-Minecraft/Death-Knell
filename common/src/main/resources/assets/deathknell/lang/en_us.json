@@ -40,7 +40,7 @@
   "message.deathknell.trounced": "%1$s was trounced by %2$s",
   "message.deathknell.trounced.item": "%1$s was trounced by %2$s using %3$s",
   "message.deathknell.ended": "%1$s was ended by %2$s",
-  "message.deathknell.ended.item": "%1$s was bested by %2$s using %3$s",
+  "message.deathknell.ended.item": "%1$s was ended by %2$s using %3$s",
   "message.deathknell.perished": "%1$s perished whilst fighting %2$s",
   "message.deathknell.perished.item": "%1$s perished by %3$s whilst fighting %2$s",
   "message.deathknell.demise": "%2$s caused %1$s's demise",
