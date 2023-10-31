@@ -7,6 +7,7 @@ import net.darkhax.deathknell.mixin.AccessorCombatTracker;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.CombatEntry;
 import net.minecraft.world.damagesource.CombatTracker;
@@ -21,6 +22,7 @@ import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class DeathKnellCommon {
 
@@ -34,6 +36,10 @@ public class DeathKnellCommon {
     private static final IDeathMessage DEATH_BY_COOKIE = new DeathMessage("death_by_cookie");
     private static final IDeathMessage DEATH_BY_BOOK = new DeathMessage("death_by_book");
     private static final IDeathMessage DEATH_BY_AXE = new DeathMessage("death_by_axe");
+    private static final IDeathMessage DEATH_BY_BED = new DeathMessage("death_by_bed");
+    private static final IDeathMessage DEATH_BY_STONE_CUTTER = new DeathMessage("death_by_stone_cutter");
+    private static final IDeathMessage DEATH_BY_WRITABLE_BOOK = new DeathMessage("death_by_writable_book");
+
     private static final IDeathMessage BURNED_ALIVE = new DeathMessageRandom("incinerated", "reduce_to_ash", "cooked_alive");
     private static final IDeathMessage SPIDER_VENOM = new DeathMessage("spider_venom");
     private static final IDeathMessage SLIME_DEATH = new DeathMessageRandom("dissolve", "slime_food");
@@ -128,6 +134,21 @@ public class DeathKnellCommon {
                     else if (murderWeapon.getItem() instanceof AxeItem || murderWeapon.is(AXES)) {
 
                         return DEATH_BY_AXE.getMessage(deadMob, killer);
+                    }
+
+                    else if (murderWeapon.is(Items.WRITABLE_BOOK)) {
+
+                        return DEATH_BY_WRITABLE_BOOK.getMessage(deadMob, killer);
+                    }
+
+                    else if (murderWeapon.is(Items.STONECUTTER)) {
+
+                        return DEATH_BY_STONE_CUTTER.getMessage(deadMob, killer);
+                    }
+
+                    else if (murderWeapon.is(ItemTags.BEDS)) {
+
+                        return DEATH_BY_BED.getMessage(deadMob, killer);
                     }
 
                     // 85% chance to replace vanilla generic death messages
