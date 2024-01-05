@@ -4,8 +4,10 @@ import net.darkhax.deathknell.message.DeathMessage;
 import net.darkhax.deathknell.message.DeathMessageRandom;
 import net.darkhax.deathknell.message.IDeathMessage;
 import net.darkhax.deathknell.mixin.AccessorCombatTracker;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.contents.TranslatableContents;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.CombatEntry;
@@ -15,7 +17,11 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.animal.PolarBear;
-import net.minecraft.world.entity.monster.*;
+import net.minecraft.world.entity.monster.Blaze;
+import net.minecraft.world.entity.monster.CaveSpider;
+import net.minecraft.world.entity.monster.Drowned;
+import net.minecraft.world.entity.monster.Guardian;
+import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
@@ -48,7 +54,7 @@ public class DeathKnellCommon {
 
 
     private static CombatEntry getLastCombatEntry(AccessorCombatTracker tracker) {
-        
+
         return tracker.deathknell$getEntries().isEmpty() ? null : tracker.deathknell$getEntries().get(tracker.deathknell$getEntries().size() - 1);
     }
 
@@ -76,13 +82,13 @@ public class DeathKnellCommon {
                     }
 
                     //There is no actual DamageTypeTag for the elytra flying into a wall, but this still works
-                    if(source.is(DamageTypes.FLY_INTO_WALL) && tryPercent(0.6f)) {
+                    if (source.is(DamageTypes.FLY_INTO_WALL) && tryPercent(0.6f)) {
 
                         return ELYTRA_WALL_DEATH.getMessage(deadMob);
                     }
 
                     //Void death messages. The ALWAYS_MOST_SIGNIFICANT_FALL tag only has the void damage type applied
-                    if(source.is(DamageTypeTags.ALWAYS_MOST_SIGNIFICANT_FALL) && tryPercent(0.6f)) {
+                    if (source.is(DamageTypeTags.ALWAYS_MOST_SIGNIFICANT_FALL) && tryPercent(0.6f)) {
 
                         return VOID_DEATH.getMessage(deadMob);
                     }
@@ -181,7 +187,7 @@ public class DeathKnellCommon {
 
     private static TagKey<Item> bind(String tagId) {
 
-        return Services.HELPER.createItemTag(Constants.MOD_ID, tagId);
+        return TagKey.create(Registries.ITEM, new ResourceLocation(Constants.MOD_ID, tagId));
     }
 
     private static boolean tryPercent(float percent) {
