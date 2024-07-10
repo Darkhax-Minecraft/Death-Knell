@@ -1,10 +1,10 @@
 {
   "death.fell.accident.water": "%2$s失足落水",
-  
+
   "message.deathknell.death_by_cookie": "%2$s拿曲奇撑死了%1$s",
   "message.deathknell.death_by_book": "%2$s给%1$s好好上了一课",
   "message.deathknell.death_by_axe": "%2$s把%1$s劈成了肉片",
-  
+
   "message.deathknell.thwarted": "%1$s击溃了%2$s",
   "message.deathknell.thwarted.item": "%2$s用%3$s击溃了%1$s",
   "message.deathknell.bonked": "%1$s被%2$s狠狠来了一下",
@@ -39,25 +39,46 @@
   "message.deathknell.bested.item": "%2$s用%3$s打败了%1$s",
   "message.deathknell.trounced": "%1$s惨败于%2$s",
   "message.deathknell.trounced.item": "%1$s惨败于%2$s的%3$s之下",
-  
+  "message.deathknell.ended": "%1$s被%2$s终结了",
+  "message.deathknell.ended.item": "%1$s被%2$s用%3$s终结了",
+  "message.deathknell.perished": "%1$s在与%2$s的争斗中被爆杀了",
+  "message.deathknell.perished.item": "%1$s在与%2$s的争斗中被%3$s爆杀了",
+  "message.deathknell.demise": "%2$s让%1$s一命呜呼",
+  "message.deathknell.demise.item": "%2$s用%3$s让%1$s一命呜呼",
+  "message.deathknell.pwned": "%1$s面对%2$s时一败涂地",
+  "message.deathknell.pwned.item": "%1$s面对%2$s时被%3$s击得一败涂地",
+
   "message.deathknell.down_with_ship": "%1$s随船沉尸深海",
-  
+
   "message.deathknell.incinerated": "%2$s焚毁了%1$s",
   "message.deathknell.reduce_to_ash": "%2$s将%1$s化为了灰烬",
   "message.deathknell.cooked_alive": "%1$s被%2$s活活烹熟了",
+  "message.deathknell.fire_out": "%1$s与%2$s争斗时没有扑灭火",
   "message.deathknell.spider_venom": "%1$s输给了%2$s的剧毒",
   "message.deathknell.dissolve": "%2$s溶解了%1$s",
   "message.deathknell.slime_food": "%1$s成了%2$s的盘中餐",
   "message.deathknell.respect_habitat": "%2$s让%1$s尝到了面对栖息地拒不退避的教训",
   "message.deathknell.disturb_den": "%1$s生前不慎踏入了%2$s的巢穴",
+  "message.deathknell.saved_from_village": "%2$s从%1$s手中救下了村庄",
   "message.deathknell.watery_grave": "%2$s为%1$s安排了水葬",
   "message.deathknell.stared_down": "%1$s受到了%2$1的死亡凝视",
-  
+
   "message.deathknell.fall_bounce": "%1$s没能弹得起来",
   "message.deathknell.fall_gravity": "重力摧毁了%1$s",
   "message.deathknell.fall_parachute": "%1$s忘记带降落伞了",
-  
+  "message.deathknell.fall_stub": "%1$s撞到了小拇指痛死了",
+  "message.deathknell.free_fall": "%1$s自由——落体啦",
+
   "message.deathknell.drown_breath": "%1$s没憋得住气",
   "message.deathknell.drown_fishes": "%1$s与鱼长眠",
-  "message.deathknell.drown_fish_food": "%1$s成了鱼饲料"
+  "message.deathknell.drown_fish_food": "%1$s成了鱼饲料",
+  "message.deathknell.drown_shark_bait": "%1$s被鲨鱼吃了",
+  "message.deathknell.drown_floundered": "%1$s在水中扑腾过猛了",
+
+  "message.deathknell.elytra_wall_bang": "%1$s飞着飞着撞墙了",
+  "message.deathknell.elytra_wall_crash": "%1$s撞扁在墙上了",
+
+  "message.deathknell.void_abyss": "%1$s掉入了无限深渊",
+  "message.deathknell.void_infinity": "%1$s掉入了无限加一深渊",
+  "message.deathknell.void_divide": "%1$s被零除了"
 }
