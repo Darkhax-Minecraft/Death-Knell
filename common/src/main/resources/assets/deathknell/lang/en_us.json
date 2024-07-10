@@ -4,6 +4,9 @@
   "message.deathknell.death_by_cookie": "%2$s forced %1$s to eat too many cookies",
   "message.deathknell.death_by_book": "%2$s gave %1$s a lecture in death",
   "message.deathknell.death_by_axe": "%2$s chopped %1$s to pieces",
+  "message.deathknell.death_by_bed": "%2$s put %1$s to rest",
+  "message.deathknell.death_by_stone_cutter": "%1$s was sawed in half by %2$s",
+  "message.deathknell.death_by_writable_book": "%2$s wrote %1$s in the death note",
 
   "message.deathknell.thwarted": "%1$s was thwarted by %2$s",
   "message.deathknell.thwarted.item": "%1$s was thwarted by %2$s using %3$s",
