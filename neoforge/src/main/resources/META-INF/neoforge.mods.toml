@@ -34,3 +34,17 @@ versionRange = "[26.1.0.1-beta,)"
 ordering = "NONE"
 side = "BOTH"
 
+[[dependencies.deathknell]]
+modId = "bookshelf"
+type = "required"
+versionRange = "[0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.deathknell]]
+modId = "prickle"
+type = "required"
+versionRange = "[0,)"
+ordering = "NONE"
+side = "BOTH"
+
