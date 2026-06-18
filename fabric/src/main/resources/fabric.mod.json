@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "deathknell",
-  "version": "26.1.2.0",
+  "version": "26.2.0.0",
   "name": "DeathKnell",
   "description": "Spice up the game with new player death messages.",
   "authors": [
@@ -29,9 +29,9 @@
     "deathknell.fabric.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.18.6",
+    "fabricloader": ">=0.19.3",
     "fabric-api": "*",
-    "minecraft": ">=26.1",
+    "minecraft": ">=26.2",
     "java": ">=25",
     "bookshelf": "*",
     "prickle": "*"
