@@ -1,5 +1,5 @@
 {
-  "death.fell.accident.water": "%2$s ist in Wasser ausgerutscht",
+  "death.fell.accident.water": "%s ist in Wasser ausgerutscht",
   "message.deathknell.death_by_cookie": "%2$s zwang %1$s zu viele Kekse zu essen",
   "message.deathknell.death_by_book": "%2$s gab %1$s einen Vortrag über Tod",
   "message.deathknell.death_by_axe": "%2$s hackte %1$s in Stücke",

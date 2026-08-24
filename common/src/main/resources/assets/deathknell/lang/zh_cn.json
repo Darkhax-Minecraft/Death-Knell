@@ -1,5 +1,5 @@
 {
-  "death.fell.accident.water": "%2$s失足落水",
+  "death.fell.accident.water": "%s失足落水",
 
   "message.deathknell.death_by_cookie": "%2$s拿曲奇撑死了%1$s",
   "message.deathknell.death_by_book": "%2$s给%1$s好好上了一课",
