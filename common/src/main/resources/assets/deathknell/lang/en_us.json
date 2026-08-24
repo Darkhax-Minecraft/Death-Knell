@@ -64,7 +64,7 @@
   "message.deathknell.disturb_den": "%1$s disturbed %2$s's den",
   "message.deathknell.saved_from_village": "%2$s saved the village from %1$s",
   "message.deathknell.watery_grave": "%2$s sent %1$s to a watery grave",
-  "message.deathknell.stared_down": "%1$s was stared down by %2$1",
+  "message.deathknell.stared_down": "%1$s was stared down by %2$s",
 
   "message.deathknell.fall_bounce": "%1$s didn't bounce",
   "message.deathknell.fall_gravity": "%1$s was slain by Gravity",
