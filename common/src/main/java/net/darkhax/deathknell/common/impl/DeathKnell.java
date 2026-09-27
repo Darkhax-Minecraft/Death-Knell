@@ -22,7 +22,6 @@ import net.minecraft.world.entity.monster.cubemob.Slime;
 import net.minecraft.world.entity.monster.spider.CaveSpider;
 import net.minecraft.world.entity.monster.zombie.Drowned;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
@@ -128,7 +127,7 @@ public class DeathKnell {
                     else if (murderWeapon.is(ItemTags.BOOKSHELF_BOOKS)) {
                         return DEATH_BY_BOOK.getMessage(deadMob, killer);
                     }
-                    else if (murderWeapon.getItem() instanceof AxeItem || murderWeapon.is(ItemTags.AXES)) {
+                    else if (murderWeapon.is(ItemTags.AXES)) {
                         return DEATH_BY_AXE.getMessage(deadMob, killer);
                     }
                     // 85% chance to replace vanilla generic death messages
